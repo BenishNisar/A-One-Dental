@@ -1,0 +1,116 @@
+/* Swiper */
+.swiper {
+    cursor: grab;
+    user-select: none;
+
+    &-container {
+        user-select: none;
+    }
+
+    &-slide {
+        height: unset !important;
+        transition-property: all;
+    }
+
+    &-grid-column {
+        >.swiper-wrapper {
+            flex-direction: unset !important;
+            row-gap: 30px;
+
+            .swiper-slide {
+                margin-top: 0 !important;
+            }
+        }
+    }
+
+    &-pagination {
+        &-bullet {
+            position: relative;
+            margin: 0 8px !important;
+            background: transparent;
+            border: 1px solid $black;
+            opacity: 1 !important;
+            transition: all ease 0.5s;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                padding: 8px;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                border: 1px solid transparent;
+                transition: all ease 0.5s;
+                border-radius: 50%;
+
+                @include respond-below($screen-md) {
+                    padding: 6px;
+                }
+            }
+
+            &-active {
+                background: $black;
+
+                &::before {
+                    border-color: $black;
+                }
+            }
+        }
+
+        &.pagination-white {
+            .swiper-pagination-bullet {
+                border-color: $white;
+    
+                &-active {
+                    background: $white;
+    
+                    &::before {
+                        border-color: $white;
+                    }
+                }
+            }
+        }
+
+        &.relative {
+            bottom: unset;
+        }
+    }
+
+    &.overflow-unset {
+        padding-right: 10000px;
+        margin-right: -10000px;
+    }
+
+    &.product_swiper_list {
+        width: 430px !important;
+        margin-left: 0;
+
+        .swiper-slide {
+            position: relative;
+            cursor: pointer;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border: 2px solid transparent;
+                transition: border-color .3s ease;
+            }
+
+            &-thumb-active {
+                &::before {
+                    border-color: $black;
+                }
+            }
+        }
+
+        @media (max-width: 480px) {
+            width: 100%!important;
+        }
+    }
+}

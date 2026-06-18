@@ -1,0 +1,49 @@
+/********* Table of contents *********/
+/*** fonts ***/
+/*** variables ***/
+/*** mixins ***/
+/*** reset ***/
+/*** globals ***/
+
+/*** banner ***/
+/*** blog ***/
+/*** calendar ***/
+/*** cta ***/
+/*** custom_swiper ***/
+/*** custom_slick ***/
+/*** faqs ***/
+/*** footer ***/
+/*** header ***/
+/*** menu_tab ***/
+/*** popup ***/
+/*** process ***/
+/*** project ***/
+/*** services ***/
+/*** shop ***/
+/*** slider ***/
+/*** testimonials ***/
+
+
+@import './common/fonts';
+@import './common/variables';
+@import './common/mixins';
+@import './common/reset';
+@import './common/globals';
+
+@import './layout/banner';
+@import './layout/blog';
+@import './layout/calendar';
+@import './layout/cta';
+@import './layout/custom_swiper';
+@import './layout/custom_slick';
+@import './layout/faqs';
+@import './layout/footer';
+@import './layout/header';
+@import './layout/menu_tab';
+@import './layout/popup';
+@import './layout/process';
+@import './layout/project';
+@import './layout/services';
+@import './layout/shop';
+@import './layout/slider';
+@import './layout/testimonials';
